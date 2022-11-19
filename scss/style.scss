@@ -1,0 +1,298 @@
+$deep-dark: rgba(0, 0, 0, 0.6);
+$light-dark: rgba(0, 0, 0, 0.13);
+$main: #6200ee;
+$light: rgb(245, 245, 245);
+$accent: #03dac5;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 65.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+}
+
+.todo {
+	width: 100%;
+	height: 100%;
+	max-width: 992px;
+	min-width: 318px;
+	background-color: #fff;
+}
+
+/*
+Header
+*/
+
+.header {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+
+	&__title {
+		color: $light-dark;
+		font-size: 3.6rem;
+	}
+}
+
+/*
+Add taks
+*/
+
+.addtask {
+	position: relative;
+	width: 85%;
+	height: 100%;
+	margin: 0 auto;
+
+	&__field {
+		position: relative;
+	}
+
+	&__input {
+		width: 100%;
+		border: none;
+		background-color: $light-dark;
+		padding: 1em;
+		border-radius: 5px 100px 100px 5px;
+		font-size: 1.8rem;
+		outline: none;
+	}
+
+	&__btn {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		padding: 1em 1.8em;
+		text-transform: uppercase;
+		border-radius: 100px;
+		border: none;
+		background-color: $accent;
+		box-shadow: 0 4px 5px $light-dark;
+		font-weight: 700;
+
+		span {
+			display: none;
+		}
+	}
+
+	&__info {
+		font-size: 1.4rem;
+		color: $deep-dark;
+		padding-left: 1.4em;
+		padding-top: 0.4em;
+		color: $main;
+		font-weight: 700;
+	}
+}
+/*
+List
+*/
+
+.fas {
+	pointer-events: none;
+}
+
+.todolist {
+	list-style: none;
+	margin: 1.5em auto 3em auto;
+	width: 85%;
+
+	.fa-pen-to-square {
+		padding-right: 1em;
+	}
+
+	li {
+		padding: 1em 0 0.5em 0.2em;
+		display: flex;
+		position: relative;
+		border-bottom: 2px solid $light-dark;
+	}
+
+	&__tools {
+		position: absolute;
+		right: 0;
+		font-size: 0;
+	}
+
+	&__tool {
+		border: none;
+		background: none;
+		padding: 0 0.5em;
+		color: $deep-dark;
+		border-radius: 50px;
+		height: 2em;
+		width: 2em;
+		
+		&:hover {
+			background-color: $accent;
+		}
+
+		&-edit {
+			background: $light-dark;
+			padding: 0.4em 1em;
+			width: min-content;
+
+			i {
+				display: none;
+			}
+		}
+	}
+
+	.tool-completed {
+		background-color: $accent;
+	}
+}
+
+/*
+PopUp
+*/
+
+.popup {
+	display: none;
+	position: absolute;
+	width: 100%;
+	max-width: 768px;
+	bottom: 20px;
+	background-color: #fff;
+	padding: 1.5em;
+	box-shadow: 1px 1px 10px $light-dark;
+	border-radius: 5px;
+
+	&__title {
+		font-size: 1.2rem;
+		font-weight: 400;
+		position: absolute;
+		background-color: #fff;
+		padding: 0 0.5em;
+		left: 3em;
+		top: 1.4em;
+	}
+
+	&__input {
+		width: 100%;
+		height: 100%;
+		min-height: 3.6em;
+		border: 1px solid $light-dark;
+		border-radius: 4px;
+		padding: 0.5em;
+		font-size: 1.8rem;
+	}
+
+	&__footer {
+		position: relative;
+		text-align: right;
+	}
+
+	&__btn {
+		background: none;
+		border: none;
+		font-weight: 700;
+		color: $main;
+		text-transform: uppercase;
+		padding-top: 2em;
+
+		&--accept {
+			padding-right: 1em;
+		}
+	}
+
+	&__info {
+		position: absolute;
+		font-size: 1.4rem;
+		color: $deep-dark;
+		padding-left: 1em;
+		padding-top: 0.5em;
+	}
+}
+
+/*
+JS style
+*/
+
+.completed {
+	color: $light-dark;
+	text-decoration: line-through;
+}
+
+/*
+Media
+*/
+
+@media (min-width: 576px) {
+	body {
+		font-size: 1.8rem;
+	}
+
+	.header {
+		padding: 2em;
+
+		&__title {
+			font-size: 4.8rem;
+		}
+	}
+
+	.addtask {
+		&__btn {
+			span {
+				display: inline-block;
+				padding-left: 0.5em;
+			}
+		}
+	}
+
+	.popup {
+		width: 80%;
+
+		&__title {
+			left: 3.5em;
+			top: 1.7em;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+		background-color: $light;
+	}
+
+	.header {
+		padding: 3em;
+
+		&__title {
+			font-size: 5.6rem;
+		}
+	}
+
+	.todo {
+		margin: 3em;
+	}
+
+	.popup {
+		width: 75%;
+		padding: 2em;
+
+		&__title {
+			left: 5em;
+			top: 2.5em;
+		}
+	}
+
+	.todolist {
+		&__tool {
+			font-size: 1.4rem;
+		}
+	}
+}

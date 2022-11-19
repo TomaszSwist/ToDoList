@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 65.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+.todo {
+  width: 100%;
+  height: 100%;
+  max-width: 992px;
+  min-width: 318px;
+  background-color: #fff;
+}
+
+/*
+Header
+*/
+.header {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+.header__title {
+  color: rgba(0, 0, 0, 0.13);
+  font-size: 3.6rem;
+}
+
+/*
+Add taks
+*/
+.addtask {
+  position: relative;
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+.addtask__field {
+  position: relative;
+}
+.addtask__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.13);
+  padding: 1em;
+  border-radius: 5px 100px 100px 5px;
+  font-size: 1.8rem;
+  outline: none;
+}
+.addtask__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  padding: 1em 1.8em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-color: #03dac5;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.13);
+  font-weight: 700;
+}
+.addtask__btn span {
+  display: none;
+}
+.addtask__info {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 1.4em;
+  padding-top: 0.4em;
+  color: #6200ee;
+  font-weight: 700;
+}
+
+/*
+List
+*/
+.fas {
+  pointer-events: none;
+}
+
+.todolist {
+  list-style: none;
+  margin: 1.5em auto 3em auto;
+  width: 85%;
+}
+.todolist .fa-pen-to-square {
+  padding-right: 1em;
+}
+.todolist li {
+  padding: 1em 0 0.5em 0.2em;
+  display: flex;
+  position: relative;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.13);
+}
+.todolist__tools {
+  position: absolute;
+  right: 0;
+  font-size: 0;
+}
+.todolist__tool {
+  border: none;
+  background: none;
+  padding: 0 0.5em;
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 50px;
+  height: 2em;
+  width: 2em;
+}
+.todolist__tool:hover {
+  background-color: #03dac5;
+}
+.todolist__tool-edit {
+  background: rgba(0, 0, 0, 0.13);
+  padding: 0.4em 1em;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.todolist__tool-edit i {
+  display: none;
+}
+.todolist .tool-completed {
+  background-color: #03dac5;
+}
+
+/*
+PopUp
+*/
+.popup {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-width: 768px;
+  bottom: 20px;
+  background-color: #fff;
+  padding: 1.5em;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+}
+.popup__title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  position: absolute;
+  background-color: #fff;
+  padding: 0 0.5em;
+  left: 3em;
+  top: 1.4em;
+}
+.popup__input {
+  width: 100%;
+  height: 100%;
+  min-height: 3.6em;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+  padding: 0.5em;
+  font-size: 1.8rem;
+}
+.popup__footer {
+  position: relative;
+  text-align: right;
+}
+.popup__btn {
+  background: none;
+  border: none;
+  font-weight: 700;
+  color: #6200ee;
+  text-transform: uppercase;
+  padding-top: 2em;
+}
+.popup__btn--accept {
+  padding-right: 1em;
+}
+.popup__info {
+  position: absolute;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 1em;
+  padding-top: 0.5em;
+}
+
+/*
+JS style
+*/
+.completed {
+  color: rgba(0, 0, 0, 0.13);
+  text-decoration: line-through;
+}
+
+/*
+Media
+*/
+@media (min-width: 576px) {
+  body {
+    font-size: 1.8rem;
+  }
+  .header {
+    padding: 2em;
+  }
+  .header__title {
+    font-size: 4.8rem;
+  }
+  .addtask__btn span {
+    display: inline-block;
+    padding-left: 0.5em;
+  }
+  .popup {
+    width: 80%;
+  }
+  .popup__title {
+    left: 3.5em;
+    top: 1.7em;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-color: rgb(245, 245, 245);
+  }
+  .header {
+    padding: 3em;
+  }
+  .header__title {
+    font-size: 5.6rem;
+  }
+  .todo {
+    margin: 3em;
+  }
+  .popup {
+    width: 75%;
+    padding: 2em;
+  }
+  .popup__title {
+    left: 5em;
+    top: 2.5em;
+  }
+  .todolist__tool {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=style.css.map */

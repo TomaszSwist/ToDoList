@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/3b6db8cd70.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="todo">
+
+        <div class="header">
+            <h1 class="header__title">ToDo List</h1>
+        </div>
+
+        <div class="addtask">
+            <div class="addtask__field">
+                <input type="text" class="addtask__input" placeholder="What you want to do?">
+                <button class="addtask__btn addtask__btn--desktop"><i class="fas fa-plus"></i> <span>Create</span></button>
+            </div>
+            <p class="addtask__info"></p>
+        </div>
+
+        <div class="todolist">
+            <ul>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="popup">
+        <h3 class="popup__title">Edit task</h3>
+        <input type="text" class="popup__input" placeholder="">
+        <div class="popup__footer">
+            <p class="popup__info"></p>
+            <button class="popup__btn popup__btn--accept">Accept</button>
+            <button class="popup__btn popup__btn--cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
