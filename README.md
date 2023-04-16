@@ -1,4 +1,5 @@
 # ToDoList
-Just another ToDo List app.
+Just another ToDo List.
 
-This app is si made full in JS, HTML and SASS.
+This app is made in:
+      JS, HTML and SASS.
