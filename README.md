@@ -5,4 +5,4 @@ With the knowledge from the JavaScript course, I created a brand new ToDoList fr
 URL: https://tomaszswist.github.io/ToDoList/
 
 This application is done in:
-     JS, HTML and SASS. 
+    JS, HTML and SASS. 
