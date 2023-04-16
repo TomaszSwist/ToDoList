@@ -1,5 +1,5 @@
 # ToDoList
-Another to-do list.
+Just another to-do list.
 
 With the knowledge from the JavaScript course, I created a brand new ToDoList from scratch.
 
