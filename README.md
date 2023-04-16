@@ -6,4 +6,4 @@ URL: https://tomaszswist.github.io/ToDoList/
 
 This application is done in:
 
-    Adding a new goal JS, HTML and SASS. 
+    JS, HTML and SASS. 
