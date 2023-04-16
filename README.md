@@ -1,5 +1,8 @@
 # ToDoList
-Just another ToDo List.
+Another to-do list.
 
-This app is made in:
-      JS, HTML and SASS.
+With the knowledge from the JavaScript course, I created a brand new ToDoList from scratch.
+URL: https://tomaszswist.github.io/ToDoList/
+
+This application is done in:
+    JS, HTML and SASS. 
